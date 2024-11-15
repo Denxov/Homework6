@@ -3,7 +3,7 @@ class Vehicle():
 
     def set_color(self,color):
         if color.lower() in self.__COLOR_VARIANTS:# проверка на наличие цвета в базе
-            self._color=color.lower()
+            self._color=color
             return self
         else:
             print(f'Нельзя сменить цвет на {color}')
