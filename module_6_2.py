@@ -40,7 +40,7 @@ vehicle1.print_info()
 vehicle1.set_color('Pink')
 vehicle1.set_color('BLACK')
 vehicle1.owner = 'Vasyok'
-vehicle1.engine_power=10 # значение атрибута не изменится
+vehicle1.__engine_power=10 # значение атрибута не изменится
 
 
 # Проверяем что поменялось
