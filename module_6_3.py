@@ -11,9 +11,10 @@ class Animal():
     def move(self,dx,dy,dz):
         if self.coords[2]+dz*self.speed<0:
             print("It's too deep, i can't dive :(")
-        self.coords[0]+=dx*self.speed
-        self.coords[1]+=dy*self.speed
-        self.coords[2]+=dz*self.speed
+        else:
+            self.coords[0]+=dx*self.speed
+            self.coords[1]+=dy*self.speed
+            self.coords[2]+=dz*self.speed
 
     def get_cords(self):
         print(f'X={self.coords[0]} Y={self.coords[1]} Z={self.coords[2]}')
@@ -55,4 +56,6 @@ db.dive_in(6)
 db.get_cords()
 
 db.lay_eggs()
+
+print(db.beak)
 
