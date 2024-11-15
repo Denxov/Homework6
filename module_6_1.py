@@ -19,7 +19,7 @@ class Mammal(Animal):
             self.fed=True
         else:
             print(f'{self.name} не стал есть {food.name} ')
-            selt.alive=False
+            self.alive=False
 
 class Predator(Animal):
     def eat(self,food:Plant):
