@@ -57,5 +57,4 @@ db.get_cords()
 
 db.lay_eggs()
 
-print(db.beak)
 
