@@ -28,9 +28,9 @@ class Figure():
                 if type(args[i])!=int or  args[i]<=0:
                     return False
             return True
-        if self.sides_count!=i+1: return False
+
     def get_sides(self):
-        return self.__sides
+        return list(self.__sides)
     def set_sides(self,*sides):
         if self.is_valid_sides(sides):
             self.__sides=sides
@@ -44,14 +44,17 @@ class Figure():
 class Circle(Figure):
     sides_count=1
     def __init__(self,color,*args):
-        radius=args[0]/math.pi/2
+        self.radius=args[0]/math.pi/2
         super().__init__(color,args)
 
 class Triangle(Figure):
     sides_count=3
     def get_square(self):
         p=len(self)*0.5
-        return (p:=p*(p-self.__sides[x]) for x in range(0,2))
+        pp=p
+        for x in self._Figure__sides:
+            pp=pp*(p-x)
+        return math.sqrt(pp)
 
 class Cube(Figure):
     sides_count=12
@@ -90,3 +93,5 @@ print(cube1.get_volume())
 print(triangle1.get_square())
 print(len(triangle1))
 
+print(len(cube1))
+print(circle1.radius)
