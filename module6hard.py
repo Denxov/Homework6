@@ -30,10 +30,10 @@ class Figure():
             return True
 
     def get_sides(self):
-        return list(self.__sides)
+        return self.__sides
     def set_sides(self,*sides):
         if self.is_valid_sides(sides):
-            self.__sides=sides
+            self.__sides=list(sides)
 
     def __len__(self):
         len=0
@@ -61,7 +61,6 @@ class Cube(Figure):
     __sides=[]
     def __init__(self,color,*args):
         self.__sides=[args[0] for i in range(0,self.sides_count)]
-        #print(self.__sides)
         super().__init__(color,*self.__sides)
 
     def get_volume(self):
