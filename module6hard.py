@@ -46,6 +46,8 @@ class Circle(Figure):
     def __init__(self,color,*args):
         self.radius=args[0]/math.pi/2
         super().__init__(color,args)
+    def get_square(self):
+        return math.pi*self.radius**2
 
 class Triangle(Figure):
     sides_count=3
@@ -94,3 +96,4 @@ print(len(triangle1))
 
 print(len(cube1))
 print(circle1.radius)
+print(circle1.get_square())
